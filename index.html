@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>Instagram Portfolio</title>
+    <!--<link href='http://fonts.googleapis.com/css?family=Lato:400,700|Kaushan+Script|Montserrat' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+<body>
+<header>
+    <img src="images/mountain.jpg" alt="Mountain"/>
+    <div class="name fancy-font">namho</div>
+    <div class="titles">
+        <h1>Hello! I'm Hoang Nam</h1>
+        <h2>I love to travel all around the world and design beautiful things</h2>
+    </div>
+    <div class="social">
+        <a class="facebook" href="#">Facebook</a>
+        <a class="twitter" href="#">Twitter</a>
+        <a class="instagram" href="#">Instagram</a>
+    </div>
+</header>
+<section class="instagram-wrap" ng-controller="ShowController">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="instagram-content">
+                    <h3>Latest Photos</h3>
+                    <div class="row photos-wrap">
+                        <!-- Instafeed target div -->
+                        <div instafeed ng-repeat="feed in feeds | orderBy:'-date'"></div>
+
+                        <!-- The following HTML will be our template inside instafeed -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Get in touch</h4>
+                <p class="about-text">I shoot, design and write. Don't hesitate and get in touch with me if you need some creative work done. I always work to achieve my best and fulfil client needs</p>
+                <a class="contact-now-btn" href="#">Contact Now</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<section class="footer-bottom">
+    2015 &copy; Nguyen Hoang Nam. All rights reserved.
+</section>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script>
+    angular.module('myApp', [])
+            .controller('ShowController', function($scope, $http) {
+                $http.get('js/clientfeeds.json').success(function(data) {
+                    $scope.feeds = data;
+
+                });
+            })
+            .directive('instafeed' , function() {
+                return {
+                    templateUrl: "instafeed.html"
+                }
+            })
+
+
+</script>
+
+<!--<script type="text/javascript" src="js/instafeed.min.js"></script>-->
+<!--<script type="text/javascript" src="js/app.js"></script>-->
+</html>

@@ -1,0 +1,280 @@
+/*
+* Custom variables
+*/
+/*
+* Override Bootstrap variables
+*/
+@import url(../stylesheets/bootstrap.css);
+/* line 30, ../sass/style.scss */
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* line 35, ../sass/style.scss */
+body {
+  color: #585c65;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+/* line 42, ../sass/style.scss */
+header {
+  max-height: 600px;
+  height: 600px;
+  overflow: hidden;
+}
+/* line 47, ../sass/style.scss */
+header img {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  margin-left: -600px;
+  width: 1200px;
+}
+@media screen and (min-width: 1200px) {
+  /* line 47, ../sass/style.scss */
+  header img {
+    top: auto;
+    left: auto;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* line 64, ../sass/style.scss */
+.name {
+  font-size: 21px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: #FFF;
+}
+
+/* line 72, ../sass/style.scss */
+.titles {
+  position: absolute;
+  bottom: 40%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  /* line 72, ../sass/style.scss */
+  .titles {
+    bottom: 50%;
+  }
+}
+
+/* line 83, ../sass/style.scss */
+h1, h2 {
+  width: 100%;
+  color: #FFF;
+  margin: 0;
+}
+
+/* line 89, ../sass/style.scss */
+h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+/* line 96, ../sass/style.scss */
+h1 span {
+  display: block;
+}
+@media screen and (min-width: 992px) {
+  /* line 96, ../sass/style.scss */
+  h1 span {
+    display: inline;
+  }
+}
+
+/* line 105, ../sass/style.scss */
+h2 {
+  font-size: 16px;
+  width: 70%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  /* line 105, ../sass/style.scss */
+  h2 {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* line 116, ../sass/style.scss */
+.fancy-font {
+  font-family: "Kaushan Script", cursive;
+}
+
+/* line 120, ../sass/style.scss */
+.social {
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  overflow: hidden;
+}
+/* line 126, ../sass/style.scss */
+.social a {
+  float: left;
+  width: 26px;
+  height: 26px;
+  margin: 0 5px;
+  text-indent: -9999px;
+  background: url(../images/social-sprite.png) no-repeat;
+  opacity: 0.6;
+}
+/* line 135, ../sass/style.scss */
+.social a:hover {
+  opacity: 1.0;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (-min-device-pixel-ratio: 2) {
+  /* line 126, ../sass/style.scss */
+  .social a {
+    background: url(../images/social-sprite@2x.png) no-repeat;
+    background-size: 76px 26px;
+  }
+}
+/* line 144, ../sass/style.scss */
+.social a.facebook {
+  background-position: 0px 0px;
+}
+/* line 148, ../sass/style.scss */
+.social a.twitter {
+  background-position: -25px 0px;
+}
+/* line 152, ../sass/style.scss */
+.social a.instagram {
+  background-position: -50px 0px;
+}
+
+/* line 158, ../sass/style.scss */
+.instagram-wrap {
+  background: #eeeeee;
+}
+
+/* line 163, ../sass/style.scss */
+.instagram-content h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  padding: 50px 0;
+  color: #bbbbbb;
+}
+
+/* line 175, ../sass/style.scss */
+.photo-box {
+  margin: 0 0 30px 0;
+}
+/* line 179, ../sass/style.scss */
+.photo-box .image-wrap img {
+  width: 100%;
+}
+/* line 183, ../sass/style.scss */
+.photo-box .image-wrap .likes {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  padding: 5px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #FFF;
+}
+/* line 193, ../sass/style.scss */
+.photo-box .description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  background: #FFF;
+  color: #9b9b9b;
+  letter-spacing: 1px;
+  padding: 15px;
+  height: 75px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 207, ../sass/style.scss */
+footer {
+  background: #FFF;
+  padding: 30px 0;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  /* line 207, ../sass/style.scss */
+  footer {
+    padding: 100px 0;
+  }
+}
+/* line 216, ../sass/style.scss */
+footer h4 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* line 224, ../sass/style.scss */
+footer .about-text {
+  padding: 0 30px;
+}
+@media screen and (min-width: 1200px) {
+  /* line 224, ../sass/style.scss */
+  footer .about-text {
+    width: 650px;
+    margin: 0 auto;
+  }
+}
+/* line 233, ../sass/style.scss */
+footer .contact-now-btn {
+  display: inline-block;
+  width: 70%;
+  padding: 20px 50px;
+  margin-top: 20px;
+  color: #FFF;
+  background: #585c65;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 992px) {
+  /* line 233, ../sass/style.scss */
+  footer .contact-now-btn {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 233, ../sass/style.scss */
+  footer .contact-now-btn {
+    width: 20%;
+    margin-top: 50px;
+  }
+}
+/* line 254, ../sass/style.scss */
+footer .contact-now-btn:hover {
+  background: #646873;
+}
+
+/* line 260, ../sass/style.scss */
+.footer-bottom {
+  background: #FFF;
+  padding: 10px 60px;
+  border-top: 2px solid #eeeeee;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #9b9b9b;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 992px) {
+  /* line 260, ../sass/style.scss */
+  .footer-bottom {
+    padding: 40px 0;
+  }
+}
