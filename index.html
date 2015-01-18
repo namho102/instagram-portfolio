@@ -61,7 +61,7 @@
 <script>
     angular.module('myApp', [])
             .controller('ShowController', function($scope, $http) {
-                $http.get('js/clientfeeds.json').success(function(data) {
+                $http.get('json/clientfeeds.json').success(function(data) {
                     $scope.feeds = data;
 
                 });
